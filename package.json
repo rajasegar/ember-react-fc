@@ -1,13 +1,15 @@
 {
   "name": "ember-react-fc",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.0.1",
+  "description": "Ember addon to use React Functional components inside Ember apps.",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "react",
+    "react component"
   ],
-  "repository": "",
+  "repository": "https://github.com/rajasegar/ember-react-fc",
   "license": "MIT",
-  "author": "",
+  "author": "Rajasegar chandran",
   "directories": {
     "doc": "doc",
     "test": "tests"
