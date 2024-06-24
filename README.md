@@ -32,7 +32,7 @@ This addon provides a wrapper function that allows a React element to be rendere
 As an example, you can create a component like this:
 
 ```javascript
-// app/components/my-react-component.js
+// app/components/my-react-component.jsx
 import React from 'react';
 import ReactDom from 'react-dom';
 import WithEmberSupport from 'ember-react-fc';
@@ -79,7 +79,7 @@ What all is this addon doing?
 
 * Provides imports for `react` and `react-dom`
 * Hooks up a bunch of necessary `babel` transforms
-* Provides a decorator for creating a thin wrapper around your React components that bridge the gap between the two libraries
+* Provides a thin wrapper around your React components that bridge the gap between the two libraries
 
 Contributing
 ------------------------------------------------------------------------------
