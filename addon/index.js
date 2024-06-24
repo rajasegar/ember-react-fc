@@ -1,16 +1,13 @@
 import EmberComponent from '@ember/component';
 import { get } from '@ember/object';
 import { schedule } from '@ember/runloop';
-import { getOwner } from '@ember/application';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
 
 import YieldWrapper from './-private/yield-wrapper';
-import grantOwnerAccess from './-private/grant-owner-access';
-import componentIsFunctional from './-private/component-is-functional';
 
-const wrapReactComponent = Klass =>
+const wrapReactComponent = ReactComponent =>
   class extends EmberComponent {
     /* Add type annotation for private `attrs` property on component */
     getPropsForReact() {
@@ -31,23 +28,14 @@ const wrapReactComponent = Klass =>
         const childNodes = this.element.childNodes;
         children = [
           React.createElement(YieldWrapper, {
-            key: get(this, 'elementId'),
+            key: this.elementId,
             nodes: [...childNodes]
           })
         ];
       }
 
-      let KlassToRender;
-
-      // if (componentIsFunctional(Klass)) {
-        KlassToRender = Klass;
-      // } else {
-        // const owner = getOwner(this);
-        // KlassToRender = grantOwnerAccess(Klass, owner);
-      // }
-
       ReactDOM.render(
-        React.createElement(KlassToRender, props, children),
+        React.createElement(ReactComponent, props, children),
         this.element
       );
     }
@@ -70,11 +58,5 @@ const wrapReactComponent = Klass =>
   };
 
 export default function WithEmberSupport(descriptor) {
-  return descriptor.toString() === '[object Descriptor]'
-    ? Object.assign({}, descriptor, {
-        finisher(Klass) {
-          return wrapReactComponent(Klass);
-        }
-      })
-    : wrapReactComponent(descriptor);
+  return wrapReactComponent(descriptor);
 }

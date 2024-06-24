@@ -9,7 +9,7 @@ export default WithEmberSupport(function FunctionalComponent(props) {
     <div id="wrapper" aria-label="hello">
       <div data-test-name>{name}</div>
       <input type="text" id="txtUser"/>
-      <header>hello</header>
+      <header>Header</header>
       {children}
     </div>
   );
