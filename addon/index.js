@@ -3,7 +3,7 @@ import { get } from '@ember/object';
 import { schedule } from '@ember/runloop';
 
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 import YieldWrapper from './-private/yield-wrapper';
 
@@ -34,10 +34,8 @@ const wrapReactComponent = ReactComponent =>
         ];
       }
 
-      ReactDOM.render(
-        React.createElement(ReactComponent, props, children),
-        this.element
-      );
+      this.root = createRoot(this.element);
+      this.root.render(React.createElement(ReactComponent, props, children));
     }
 
     didUpdateAttrs() {
@@ -51,7 +49,7 @@ const wrapReactComponent = ReactComponent =>
     }
 
     willDestroyElement() {
-      ReactDOM.unmountComponentAtNode(this.element);
+      this.root.unmount();
 
       super.willDestroyElement();
     }
