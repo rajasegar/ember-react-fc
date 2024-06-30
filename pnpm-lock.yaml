@@ -25,13 +25,7 @@ dependencies:
     version: 5.5.2
 
 devDependencies:
-  '@babel/preset-env':
-    specifier: ^7.24.7
-    version: 7.24.7(@babel/core@7.24.7)
   '@babel/preset-react':
-    specifier: ^7.24.7
-    version: 7.24.7(@babel/core@7.24.7)
-  '@babel/preset-typescript':
     specifier: ^7.24.7
     version: 7.24.7(@babel/core@7.24.7)
   '@ember/optional-features':
@@ -1428,22 +1422,6 @@ packages:
       '@babel/plugin-transform-react-jsx': 7.24.7(@babel/core@7.24.7)
       '@babel/plugin-transform-react-jsx-development': 7.24.7(@babel/core@7.24.7)
       '@babel/plugin-transform-react-pure-annotations': 7.24.7(@babel/core@7.24.7)
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /@babel/preset-typescript@7.24.7(@babel/core@7.24.7):
-    resolution: {integrity: sha512-SyXRe3OdWwIwalxDg5UtJnJQO+YPcTfwiIY2B0Xlddh9o7jpWLvv8X1RthIeDOxQ+O1ML5BLPCONToObyVQVuQ==}
-    engines: {node: '>=6.9.0'}
-    peerDependencies:
-      '@babel/core': ^7.0.0-0
-    dependencies:
-      '@babel/core': 7.24.7
-      '@babel/helper-plugin-utils': 7.24.7
-      '@babel/helper-validator-option': 7.24.7
-      '@babel/plugin-syntax-jsx': 7.24.7(@babel/core@7.24.7)
-      '@babel/plugin-transform-modules-commonjs': 7.24.7(@babel/core@7.24.7)
-      '@babel/plugin-transform-typescript': 7.24.7(@babel/core@7.24.7)
     transitivePeerDependencies:
       - supports-color
     dev: true
