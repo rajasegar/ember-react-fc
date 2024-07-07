@@ -34,7 +34,6 @@ As an example, you can create a component like this:
 ```javascript
 // app/components/my-react-component.jsx
 import React from 'react';
-import ReactDom from 'react-dom';
 import WithEmberSupport from 'ember-react-fc';
 
 export default WithEmberSupport(function MyReactComponent(props) {
@@ -68,7 +67,7 @@ Options
 ```javascript
 // ember-cli-build.js
 let app = new EmberApp(defaults, {
-  'ember-react-components': {
+  'ember-react-fc': {
     outputFile: '/assets/react.js'
   }
 });
