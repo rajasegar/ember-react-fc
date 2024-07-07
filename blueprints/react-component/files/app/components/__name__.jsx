@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDom from 'react-dom';
 import WithEmberSupport from 'ember-react-fc';
 
 export default WithEmberSupport(function <%= classifiedModuleName %>(props) {
