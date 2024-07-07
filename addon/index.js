@@ -34,7 +34,7 @@ const wrapReactComponent = ReactComponent =>
         ];
       }
 
-      this.root = createRoot(this.element);
+      this.root = this.root || createRoot(this.element);
 
       this.root.render(
         React.createElement(ReactComponent, props, children)
