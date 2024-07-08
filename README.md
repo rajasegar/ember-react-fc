@@ -59,6 +59,20 @@ And render it like this:
 
 That would create a component that renders `Hello, Raja`.
 
+
+Component Blueprints
+--------------------
+You can generate React components using the `ember g` command like this:
+```
+ember g react-component hello-world
+```
+
+This will create a new React component `hello-world.jsx` inside `app/components` folder.
+In your templates you can use it like 
+```handlebars
+<HelloWord />
+```
+
 Options
 ------------------------------------------------------------------------------
 
