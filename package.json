@@ -1,6 +1,6 @@
 {
   "name": "ember-react-fc",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Ember addon to use React Functional components inside Ember apps.",
   "keywords": [
     "ember-addon",
