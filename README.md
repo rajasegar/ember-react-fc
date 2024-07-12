@@ -4,6 +4,9 @@ ember-react-fc
 Ember addon to use React Functional components inside Ember apps.
 
 
+You can read the introductory blog post [here](https://dev.to/rajasegar/react-inside-ember-the-second-chapter-17bl)
+
+
 Compatibility
 ------------------------------------------------------------------------------
 
