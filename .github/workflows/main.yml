@@ -21,13 +21,14 @@ jobs:
       name: Install pnpm
       with:
         version: 8
-        run_install: false
+        run_install: |
+            - recursive: true
+              args: [--frozen-lockfile, --strict-peer-dependencies]
 
     - name: Install Node.js
       uses: actions/setup-node@v3
       with:
         node-version: 16
-        cache: 'pnpm'
         
     - name: Install dependencies
       run: pnpm install
