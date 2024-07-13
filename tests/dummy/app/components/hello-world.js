@@ -3,12 +3,11 @@ import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 
 export default class CounterComponent extends Component {
-
   @tracked message = 'hello';
 
-  @action toggle() { 
+  @action toggle() {
     if (this.message === 'hello') {
-      this.message = 'goodbye';
+      this.message = 'see you';
     } else {
       this.message = 'hello';
     }
