@@ -2,10 +2,9 @@
 import React from 'react';
 import WithEmberSupport from 'ember-react-fc';
 
-@WithEmberSupport
-export default class BasicComponent extends React.Component {
-  render() {
-    return <h1>Hello from React</h1>;
-  }
+function BasicComponent() {
+    return (<h1>Hello from React</h1>);
 }
+
+export default WithEmberSupport(BasicComponent);
 // END-SNIPPET
